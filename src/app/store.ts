@@ -1,16 +1,19 @@
 import { configureStore } from "@reduxjs/toolkit";
-import CounterReducer from "../features/counter/counterSlice";
 import ToggleModeThemeReducer from "../features/toggleModeTheme/toggleModeThemeSlice";
 import { rtkClient } from "../services/rtkQueryClient";
+import { serverDataApi } from "../services/serverDataApi";
 
 export const store = configureStore({
   reducer: {
-    counter: CounterReducer,
     toggleModeTheme: ToggleModeThemeReducer,
     [rtkClient.reducerPath]: rtkClient.reducer,
+    [serverDataApi.reducerPath]: serverDataApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(rtkClient.middleware),
+    getDefaultMiddleware().concat([
+      rtkClient.middleware,
+      serverDataApi.middleware,
+    ]),
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

@@ -6,11 +6,8 @@ declare module "styled-components" {
   export interface DefaultTheme {
     colors: {
       text?: string;
-      primary?: string;
-      secondary?: string;
+      itemHover?: string;
       background?: string;
-      link?: string;
-      component?: string;
     };
   }
 }

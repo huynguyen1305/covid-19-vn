@@ -3,12 +3,13 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 // https://redux-toolkit.js.org/rtk-query/api/fetchBaseQuery
 const baseQuery = fetchBaseQuery({
-  baseUrl: "https://jsonplaceholder.typicode.com/",
+  baseUrl: "https://disease.sh/v3/covid-19/",
   //   prepareHeaders: Handle header
 });
 
 export const rtkClient = createApi({
   baseQuery: baseQuery,
-  tagTypes: ["Posts"],
+  tagTypes: ["CovidData"],
+  reducerPath: "rtkClient",
   endpoints: () => ({}),
 });

@@ -1,9 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { ThemeProvider } from "styled-components";
 import GlobalStyles, { themeLight, themeDark } from "../styles/GlobalStyles";
 import { useAppDispatch, useAppSelector } from "./hooks";
 import { setTypeTheme } from "../features/toggleModeTheme/toggleModeThemeSlice";
-import ToggleModeTheme from "../features/toggleModeTheme/ToggleModeTheme";
+import { Layout } from "antd";
+import AppHeader from "../components/AppHeader/AppHeader";
+import AppFooter from "../components/AppFooter/AppFooter";
+
+const { Header, Footer, Content } = Layout;
 
 function getTypeTheme(typeTheme: string) {
   if (typeTheme === "light") {
@@ -33,20 +37,12 @@ const AppWrapper: React.FC = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <div className="App">
-        <header
-          className="AppHeader"
-          style={{ display: "flex", padding: "1rem" }}
-        >
-          <ToggleModeTheme></ToggleModeTheme>
-        </header>
-        <main className="AppMain">
-          <div>{children}</div>
-        </main>
-        <footer>
-          <div>abc</div>
-        </footer>
-      </div>
+      <Layout className="App">
+        <Content className="AppMain">{children}</Content>
+        <Footer className="AppFooter">
+          <AppFooter></AppFooter>
+        </Footer>
+      </Layout>
     </ThemeProvider>
   );
 };

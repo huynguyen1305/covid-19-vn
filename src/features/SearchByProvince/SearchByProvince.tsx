@@ -1,15 +1,6 @@
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
-import {
-  Typography,
-  Col,
-  Row,
-  Avatar,
-  Divider,
-  Statistic,
-  Select,
-  Card,
-} from "antd";
+import { Col, Row, Select, Card } from "antd";
 
 import ProvinceTable from "../../components/ProvinceTable/ProvinceTable";
 

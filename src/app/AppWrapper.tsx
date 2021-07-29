@@ -4,10 +4,9 @@ import GlobalStyles, { themeLight, themeDark } from "../styles/GlobalStyles";
 import { useAppDispatch, useAppSelector } from "./hooks";
 import { setTypeTheme } from "../features/toggleModeTheme/toggleModeThemeSlice";
 import { Layout } from "antd";
-import AppHeader from "../components/AppHeader/AppHeader";
 import AppFooter from "../components/AppFooter/AppFooter";
 
-const { Header, Footer, Content } = Layout;
+const { Footer, Content } = Layout;
 
 function getTypeTheme(typeTheme: string) {
   if (typeTheme === "light") {

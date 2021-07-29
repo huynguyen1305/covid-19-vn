@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Row,
-  Col,
-  Statistic,
-  Card,
-  Tag,
-  StatisticProps,
-  Typography,
-} from "antd";
+import { Row, Col, Statistic, Card, StatisticProps } from "antd";
 import styled from "styled-components";
 import { CovidData } from "../../services/covidDataApi";
 

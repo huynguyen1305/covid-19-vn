@@ -32,6 +32,9 @@ const AppFooter = () => {
             vnexpress.net
           </a>{" "}
           &{" "}
+          <a href="ncov.moh.gov.vn" target="_blank" rel="noopener noreferrer">
+            Sở Y tế nvov
+          </a>
         </Typography.Text>
 
         <br></br>

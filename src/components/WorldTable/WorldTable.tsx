@@ -172,7 +172,7 @@ const WorldTable: React.FC<SectionTableProps> = ({ tableData }) => {
   return (
     <SectionTableWrapper>
       <Card style={{ width: "100%" }}>
-        <Typography.Title level={4}>CHI TIẾT CÁC NƯỚC</Typography.Title>
+        <Typography.Title level={4}>CHI TIẾT CÁC NƯỚC KHÁC</Typography.Title>
         <Select
           showArrow={false}
           showSearch

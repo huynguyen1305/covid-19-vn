@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
-import { Col, Row, Select, Card } from "antd";
+import { Col, Row, Select, Card, Typography } from "antd";
 
 import ProvinceTable from "../../components/ProvinceTable/ProvinceTable";
 
@@ -57,7 +57,11 @@ const SearchByProvince: React.FC<ISearchByProvince> = ({
     setSelect(value);
   };
   return (
-    <Card title="CHI TIẾT CÁC TỈNH THÀNH">
+    <Card
+      title={
+        <Typography.Title level={4}>CHI TIẾT CÁC TỈNH THÀNH</Typography.Title>
+      }
+    >
       <Select
         showArrow={false}
         showSearch

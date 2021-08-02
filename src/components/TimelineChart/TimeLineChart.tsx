@@ -28,7 +28,18 @@ const TimeLineChart: React.FC<TimelineChartProps> = ({
         </Typography.Title>
       }
     >
-      <Line {...config} data={timelineDataByProvince[0].data}></Line>
+      <Line
+        {...config}
+        data={timelineDataByProvince[0].data}
+        tooltip={{
+          formatter: (datum: any) => {
+            return {
+              name: `Số ca mắc`,
+              value: `${datum.value}`,
+            };
+          },
+        }}
+      ></Line>
     </Card>
   );
 };

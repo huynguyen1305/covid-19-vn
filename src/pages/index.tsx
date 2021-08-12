@@ -32,6 +32,7 @@ const HomePage: React.FC = () => {
     return (
       <>
         <NextSeo
+          title="Số liệu Covid-19 tại Việt Nam | Thực hiện bởi Huy Nguyen"
           titleTemplate="Số liệu Covid-19 tại Việt Nam | Thực hiện bởi Huy Nguyen"
           description="Số liệu Covid-19 tại Việt Nam"
         ></NextSeo>
